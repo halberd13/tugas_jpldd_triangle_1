@@ -1,5 +1,3 @@
-
-
 exports.triangle_checker = function (a, b, c) {
 
     if(typeof a != 'number'){
@@ -32,6 +30,17 @@ exports.triangle_checker = function (a, b, c) {
     if(c <= 0){
         return 'Not Triangle';
     }
+
+    if(a+b <= c){
+        return 'Not Triangle';
+    }
+    if(a+c <= b){
+        return 'Not Triangle';
+    }
+    if(b+c <= a){
+        return 'Not Triangle';
+    }
+
 
     if(a==b && b==c){
         return 'Equilateral';
