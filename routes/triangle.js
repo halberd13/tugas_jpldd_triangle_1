@@ -1,44 +1,44 @@
 exports.triangle_checker = function (a, b, c) {
 
     if(typeof a != 'number'){
-        return 'a is wrong value';
+        return 'a should be a number';
     }
     if(typeof b != 'number'){
-        return 'a is wrong value';
+        return 'b should be a number';
     }
     if(typeof c != 'number'){
-        return 'a is wrong value';
+        return 'c should be a number';
     }
 
     if(!Number.isFinite(a)){
-        return 'a is wrong value';
+        return 'a should be a number';
     }
     if(!Number.isFinite(b)){
-        return 'a is wrong value';
+        return 'b should be a number';
     }
     if(!Number.isFinite(c)){
-        return 'a is wrong value';
+        return 'c should be a number';
     }
 
 
     if(a <= 0){
-        return 'Not Triangle';
+        return 'a must greater then 0';
     }
     if(b <= 0){
-        return 'Not Triangle';
+        return 'b must greater then 0';
     }
     if(c <= 0){
-        return 'Not Triangle';
+        return 'c must greater then 0';
     }
 
     if(a+b <= c){
-        return 'Not Triangle';
+        return 'Not a Triangle';
     }
     if(a+c <= b){
-        return 'Not Triangle';
+        return 'Not a Triangle';
     }
     if(b+c <= a){
-        return 'Not Triangle';
+        return 'Not a Triangle';
     }
 
 
@@ -49,7 +49,9 @@ exports.triangle_checker = function (a, b, c) {
     if(a==b || b==c || a==c){
         return 'Isosceles';
     }
-    return a + b;
+
+    return 'Scalene'
+
   }
  
   
